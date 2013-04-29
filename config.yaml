@@ -1,0 +1,23 @@
+---
+id: rubykaigi-2013
+base_name: write-document-to-improve-your-library
+tags:
+- rabbit
+- rubykaigi
+- document
+- library
+presentation_date: 2013/05/XX
+version: 2013.5.0.0
+licenses:
+- CC BY-SA 3.0
+slideshare_id: 
+speaker_deck_id: 
+ustream_id: 
+vimeo_id: 
+author:
+  markup_language: :rd
+  name: Kouhei Sutou
+  email: kou@clear-code.com
+  rubygems_user: kou
+  slideshare_user: kou
+  speaker_deck_user: kou
