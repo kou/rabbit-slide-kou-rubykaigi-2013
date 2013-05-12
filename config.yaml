@@ -1,10 +1,9 @@
 ---
 id: rubykaigi-2013
-base_name: think-about-document-to-improve-your-library
+base_name: be-a-library-developer
 tags:
 - rabbit
 - rubykaigi
-- document
 - library
 presentation_date: 2013/06/01
 version: 2013.6.1.0
