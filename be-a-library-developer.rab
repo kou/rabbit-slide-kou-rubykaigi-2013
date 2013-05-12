@@ -11,12 +11,91 @@
 : theme
    clear-code
 
+= Question 1/4
+
+Are you Rubyist?
+
+= Question 2/4
+
+Have you used any gem?
+
+= Question 3/4
+
+Did you contact a gem author?
+
+= Question 4/4
+
+Do you respect the author of the gem that you use? Is the author cool?
+
+= Question 5/5
+
+Do you want to be a gem author?
+
+= Question 6/5
+
+Are you a gem author?
+
+= Me
+
+  * A gem author\n
+    (Am I cool?)
+
+TODO: Figure: 2000- PC, 2002- Ruby, 2003- lib/rss, 2004- Ruby commiter
+
+= Agenda
+
+Introduce
+
+  * good things as a library developer based on my experience
+  * how to develope as a better "library developer"
+    * how to write codes
+    * how to write documents
+    * release
+    * support
+    * mental set
+
+= Good things
+
+= Good thing 1
+
+Less duplicated codes
+
+= Less duplicated codes
+
+I don't want to write the same codes!
+
+= Library
+
+  * Shares common codes
+  * Reuses existing codes
+  * ...
+
+= Good thing 2
+
+Reading someone's code is natural
+
+= Reading is natural
+
+  * ...
+
+= gem
+
+  * Package for easy to install
+  * Content is a library\n
+    (in many cases)
+
+= gem
+
+  * Package for easy to install
+  * Content is a (('tag:focus:library'))\n
+    (in many cases)
+
+= Summary
+
+
+
 = Target
 
 Library developers
 
-= Let's think about document in this talk
-
-ライブラリー開発者向け
-
-
+= Conclusion
