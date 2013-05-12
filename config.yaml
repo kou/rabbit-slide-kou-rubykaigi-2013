@@ -1,13 +1,13 @@
 ---
 id: rubykaigi-2013
-base_name: write-document-to-improve-your-library
+base_name: think-about-document-to-improve-your-library
 tags:
 - rabbit
 - rubykaigi
 - document
 - library
-presentation_date: 2013/05/XX
-version: 2013.5.0.0
+presentation_date: 2013/06/01
+version: 2013.6.1.0
 licenses:
 - CC BY-SA 3.0
 slideshare_id: 

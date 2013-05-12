@@ -1,4 +1,4 @@
-= Write document to improve your library
+= Think about document to improve your library
 
 TODO: SLIDE DESCRIPTION
 
