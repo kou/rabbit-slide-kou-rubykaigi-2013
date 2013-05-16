@@ -1,5 +1,8 @@
 = Be a library developer!
 
+: subtitle
+   ((*R*))emember ((*t*))han ((*I*))magine
+
 : author
    Kouhei Sutou
 : institution
@@ -7,9 +10,78 @@
 : date
    2013/06/01
 : allotted-time
-   30m
+   25m
 : theme
    clear-code
+
+= Table of contents
+
+  * Share this talk's goal
+  * Describe how to develop by examples
+  * Wrap up
+  * Next step
+
+= Share the goal
+
+  * ((*Share this talk's goal*))
+  * Describe key idea
+  * Describe how to develop by examples
+  * Wrap up
+  * Next step
+
+= This talk's goal
+
+You develope more better softwares
+
+= More better?
+
+...
+
+= Key
+
+((*R*))emember\n((*t*))han\n((*I*))magine
+
+= Imagine
+
+  * Difficult
+    * Because you didn't know
+  * Many programmers can't imagine about other people
+
+= Remember
+
+  * Easy
+    * Because you know
+  * Many Japanese Rubyists can't remember wait time
+
+= To remember,
+
+  * Experience
+  * Ask
+  * Observe
+
+= Experience!
+
+  * ((*Experience*))
+  * Ask
+  * Observe
+
+= This talk's title
+
+Be a library developer!
+
+= This talk's goal
+
+You develope more better softwares
+
+= How to improve?
+
+Experience\n
+a\n
+library developer
+
+= Why?
+
+You can remember than imagine
 
 = Question 1/4
 
