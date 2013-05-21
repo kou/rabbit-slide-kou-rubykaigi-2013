@@ -17,7 +17,8 @@
 = Table of contents
 
   * Share this talk's goal
-  * Describe how to develop by examples
+  * Describe key idea
+  * Apply the key idea
   * Wrap up
   * Next step
 
@@ -25,17 +26,125 @@
 
   * ((*Share this talk's goal*))
   * Describe key idea
-  * Describe how to develop by examples
+  * Apply the key idea
   * Wrap up
   * Next step
 
 = This talk's goal
 
-You develope more better softwares
+I want you to develope more better softwares
 
 = More better?
 
-...
+By example
+
+= API
+
+= API: 1
+
+  # coderay ruby
+  context.save
+  context.move_to(0, 0)
+  context.line_to(100, 100)
+  context.stroke
+  context.restore
+
+(('tag:center'))(('note:from cairo gem'))
+
+= API: 1 (better)
+
+  # coderay ruby
+  context.save do
+  context.move_to(0, 0)
+  context.line_to(100, 100)
+  context.stroke
+  end
+
+(('tag:center'))(('note:from cairo gem'))
+
+= API: 1 (better)
+
+  # coderay ruby
+  context.save do
+    context.move_to(0, 0)
+    context.line_to(100, 100)
+    context.stroke
+  end
+
+(('tag:center'))(('note:from cairo gem'))
+
+= API: 2
+
+  # coderay ruby
+  # low level
+  window.get_property("opacity")
+  # better
+  window.opacity
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= API: 3 (better?)
+
+  # coderay ruby
+  # low level
+  window.get_property("visible")
+  # better
+  # ???: hint: "visible" is bool
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= API: 3 (better)
+
+  # coderay ruby
+  # low level
+  window.get_property("visible")
+  # better
+  window.visible?
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= API: 4
+
+  # coderay ruby
+  # better for record as collection
+  record["name"]
+  # better for record as object
+  record.name
+
+(('tag:center'))(('note:from rroonga gem'))
+
+= Docuemnt
+
+= Document: 1
+
+Install:
+
+  For Debian GNU/Linux:
+    % sudo apt-get install libgtk2.0-dev
+    % gem install gtk2
+  For OS X:
+    ...
+
+= Document: 1 (better)
+
+Install:
+
+  % gem install gtk2
+
+= Release
+
+= Release: 1
+
+Announce:
+
+  Ruby 1.8.7 was released on June 1st, 2008.  In commemoration
+  of the thrid anniversary of Ruby 1.8.7, we have a new
+  patchlevel release today.  It includes several bug fixes.
+  For the detail please read the ChangeLog.
+
+= Release: 1: not good
+
+((*read the ChangeLog*))
 
 = Key
 
