@@ -113,6 +113,24 @@ By example
 
 (('tag:center'))(('note:from rroonga gem'))
 
+= API: 5
+
+  # coderay ruby
+  require "gst"
+  Gst.init # <- What?
+  playbin = Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= API: 5 (better)
+
+  # coderay ruby
+  require "gst"
+  # Gst.init # <- What?
+  playbin = Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
 = Docuemnt
 
 = Document: 1
