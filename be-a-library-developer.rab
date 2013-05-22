@@ -32,7 +32,7 @@
 
 = This talk's goal
 
-I want you to develope more better softwares
+You know how to develope more better softwares
 
 = More better?
 
@@ -44,8 +44,7 @@ By example
 
   # coderay ruby
   context.save
-  context.move_to(0, 0)
-  context.line_to(100, 100)
+  context.circle(50, 50, 10)
   context.stroke
   context.restore
 
@@ -55,8 +54,7 @@ By example
 
   # coderay ruby
   context.save do
-  context.move_to(0, 0)
-  context.line_to(100, 100)
+  context.circle(50, 50, 10)
   context.stroke
   end
 
@@ -66,8 +64,7 @@ By example
 
   # coderay ruby
   context.save do
-    context.move_to(0, 0)
-    context.line_to(100, 100)
+    context.circle(50, 50, 10)
     context.stroke
   end
 
@@ -118,7 +115,7 @@ By example
   # coderay ruby
   require "gst"
   Gst.init # <- What?
-  playbin = Gst::ElementFactory.make("playbin")
+  Gst::ElementFactory.make("playbin")
 
 (('tag:center'))(('note:from gstreamer gem'))
 
@@ -127,7 +124,7 @@ By example
   # coderay ruby
   require "gst"
   # Gst.init # <- What?
-  playbin = Gst::ElementFactory.make("playbin")
+  Gst::ElementFactory.make("playbin")
 
 (('tag:center'))(('note:from gstreamer gem'))
 
@@ -164,7 +161,29 @@ Announce:
 
 ((*read the ChangeLog*))
 
-= Key
+= Release: 1: better
+
+How?\nLet's think later
+
+= Confirmation
+
+= This talk's goal
+
+You know how to develope more better softwares
+
+= More better
+
+Showed by examples
+
+= Table of contents
+
+  * Share this talk's goal
+  * ((*Describe key idea*))
+  * Apply the key idea
+  * Wrap up
+  * Next step
+
+= Key idea
 
 ((*R*))emember\n((*t*))han\n((*I*))magine
 
@@ -191,6 +210,218 @@ Announce:
   * ((*Experience*))
   * Ask
   * Observe
+
+= What should you experience?
+
+= What
+
+Library user
+
+= Library user?
+
+You experienced!
+
+= Key idea
+
+((*R*))emember\n((*t*))han\n((*I*))magine
+
+= Remember
+
+= Apply the key idea
+
+  * Share this talk's goal
+  * Describe key idea
+  * ((*Apply the key idea*))
+  * Wrap up
+  * Next step
+
+= API
+
+= API: 1
+
+  # coderay ruby
+  context.save
+  context.circle(50, 50, 10)
+  context.stroke
+  context.restore
+
+(('tag:center'))(('note:from cairo gem'))
+
+= API: 1: Point
+
+  # coderay ruby
+  context.save    # Setup
+  context.circle(50, 50, 10)
+  context.stroke
+  context.restore # Teardown
+
+(('tag:center'))(('note:from cairo gem'))
+
+= Remember
+
+File
+
+= Remember: File
+
+  # coderay ruby
+
+  # Setup
+  file = File.open(path)
+  file.read
+  # Teardown
+  file.close
+
+= Remember: File
+
+  # coderay ruby
+  # Ensure teardown
+  File.open(path) do |file|
+    file.read
+    raise "error!"
+  end
+
+= do ... end style
+
+Merit:\n
+Ensure close
+
+= API: 1
+
+  # coderay ruby
+  context.save    # Setup
+  context.circle(50, 50, 10)
+  context.stroke
+  context.restore # Teardown
+
+(('tag:center'))(('note:from cairo gem'))
+
+= API: 1 (better)
+
+  # coderay ruby
+  # Ensure teardown
+  context.save do
+    context.circle(50, 50, 10)
+    context.stroke
+  end
+
+(('tag:center'))(('note:from cairo gem'))
+
+= API: 2
+
+  # coderay ruby
+  # low level
+  window.get_property("opacity")
+  # better
+  window.opacity
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= API: 2: Point
+
+property\n==\nattribute
+
+= Remember
+
+Normal object
+
+= API: 2
+
+  # coderay ruby
+  # low level
+  window.get_property("opacity")
+  # better
+  window.opacity
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+TODO: ...
+
+= API: 3 (better?)
+
+  # coderay ruby
+  # low level
+  window.get_property("visible")
+  # better
+  # ???: hint: "visible" is bool
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= API: 3 (better)
+
+  # coderay ruby
+  # low level
+  window.get_property("visible")
+  # better
+  window.visible?
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= API: 4
+
+  # coderay ruby
+  # better for record as collection
+  record["name"]
+  # better for record as object
+  record.name
+
+(('tag:center'))(('note:from rroonga gem'))
+
+= API: 5
+
+  # coderay ruby
+  require "gst"
+  Gst.init # <- What?
+  Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= API: 5 (better)
+
+  # coderay ruby
+  require "gst"
+  # Gst.init # <- What?
+  Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= Docuemnt
+
+= Document: 1
+
+Install:
+
+  For Debian GNU/Linux:
+    % sudo apt-get install libgtk2.0-dev
+    % gem install gtk2
+  For OS X:
+    ...
+
+= Document: 1 (better)
+
+Install:
+
+  % gem install gtk2
+
+= Release
+
+= Release: 1
+
+Announce:
+
+  Ruby 1.8.7 was released on June 1st, 2008.  In commemoration
+  of the thrid anniversary of Ruby 1.8.7, we have a new
+  patchlevel release today.  It includes several bug fixes.
+  For the detail please read the ChangeLog.
+
+= Release: 1: not good
+
+((*read the ChangeLog*))
+
+= Release: 1: better
+
+How?\nLet's think later
+
+
 
 = This talk's title
 
