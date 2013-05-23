@@ -12,26 +12,25 @@
 : allotted-time
    25m
 : theme
-   clear-code
+   .
 
 = Table of contents
 
   * Share this talk's goal
   * Describe key idea
   * Apply the key idea
-  * Wrap up
-  * Next step
+  * Wrap up & The next step
 
 = Share the goal
 
   * ((*Share this talk's goal*))
   * Describe key idea
   * Apply the key idea
-  * Wrap up
-  * Next step
+  * Wrap up & The next step
 
 = This talk's goal
 
+(('tag:as-large-as-possible'))
 You know how to develope more better softwares
 
 = More better?
@@ -108,13 +107,24 @@ By example
   # better for record as object
   record.name
 
-(('tag:center'))(('note:from rroonga gem'))
+(('tag:center'))(('note:from groonga gem'))
 
 = API: 5
 
   # coderay ruby
   require "gst"
+  # ???
   Gst.init # <- What?
+  Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= API: 5
+
+  # coderay ruby
+  require "gst"
+  # For advanced use
+  Gst.init("--gst-debug=*:9")
   Gst::ElementFactory.make("playbin")
 
 (('tag:center'))(('note:from gstreamer gem'))
@@ -123,10 +133,24 @@ By example
 
   # coderay ruby
   require "gst"
-  # Gst.init # <- What?
+  # Make optional
+  # Gst.init
   Gst::ElementFactory.make("playbin")
 
 (('tag:center'))(('note:from gstreamer gem'))
+
+= Implementation
+
+  # coderay ruby
+  class << Gst
+    def const_missing(name)
+      init; const_get(name); end
+    def init(*argv)
+      # ...initialize library...
+      class << self
+        remove_method(:init)
+        remove_method(:const_missing)
+      end; end; end
 
 = Docuemnt
 
@@ -169,19 +193,19 @@ How?\nLet's think later
 
 = This talk's goal
 
+(('tag:as-large-as-possible'))
 You know how to develope more better softwares
 
 = More better
 
-Showed by examples
+Showed\nby examples
 
 = Table of contents
 
   * Share this talk's goal
   * ((*Describe key idea*))
   * Apply the key idea
-  * Wrap up
-  * Next step
+  * Wrap up & The next step
 
 = Key idea
 
@@ -232,8 +256,7 @@ You experienced!
   * Share this talk's goal
   * Describe key idea
   * ((*Apply the key idea*))
-  * Wrap up
-  * Next step
+  * Wrap up & The next step
 
 = API
 
@@ -334,8 +357,6 @@ Normal object
 
 (('tag:center'))(('note:from gtk2 gem'))
 
-TODO: ...
-
 = API: 3 (better?)
 
   # coderay ruby
@@ -346,12 +367,22 @@ TODO: ...
 
 (('tag:center'))(('note:from gtk2 gem'))
 
+= Remember
+
+Predicate
+
+= Remember: Predicate
+
+  # coderay ruby
+  [].empty?
+  0.zero?
+
 = API: 3 (better)
 
   # coderay ruby
   # low level
   window.get_property("visible")
-  # better
+  # better: "?" suffix
   window.visible?
 
 (('tag:center'))(('note:from gtk2 gem'))
@@ -364,22 +395,56 @@ TODO: ...
   # better for record as object
   record.name
 
-(('tag:center'))(('note:from rroonga gem'))
+(('tag:center'))(('note:from groonga gem'))
 
 = API: 5
 
   # coderay ruby
   require "gst"
+  # ???
   Gst.init # <- What?
   Gst::ElementFactory.make("playbin")
 
 (('tag:center'))(('note:from gstreamer gem'))
 
+= API: 5
+
+  # coderay ruby
+  require "gst"
+  # For advanced use
+  Gst.init("--gst-debug=*:9")
+  Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= Remember
+
+Socket
+
+= Socket in C
+
+  # coderay c
+  int fd;
+  struct sockaddr *address;
+  fd = socket(PF_INET, SOCK_STREAM, 0);
+  /* address.sa_family = ...; */
+  connect(fd, address, address_size);
+
+= Socket in Ruby
+
+  # coderay ruby
+  TCPSocket.new("www.ruby-lang.org", 80)
+
+= Point
+
+Provide defaults
+
 = API: 5 (better)
 
   # coderay ruby
   require "gst"
-  # Gst.init # <- What?
+  # Make optional
+  # Gst.init
   Gst::ElementFactory.make("playbin")
 
 (('tag:center'))(('note:from gstreamer gem'))
@@ -396,11 +461,36 @@ Install:
   For OS X:
     ...
 
+= Remember
+
+You installed Nokogiri
+
+= Remember: Nokogiri
+
+  % gem install nokogiri
+  ...
+  libxml2 is missing. ...
+  ...
+  *** extconf.rb failed ***
+
+= Remember: Nokogiri
+
+  % sudo apt-get install libxml2-dev
+
+= Remember: Nokogiri
+
+  % gem install nokogiri
+  ...
+  libxslt is missing. ...
+  ...
+  *** extconf.rb failed ***
+
 = Document: 1 (better)
 
 Install:
 
   % gem install gtk2
+  (with auto "apt-get install")
 
 = Release
 
@@ -421,111 +511,52 @@ Announce:
 
 How?\nLet's think later
 
+TODO
 
+= Wrap up
 
-= This talk's title
-
-Be a library developer!
+  * Share this talk's goal
+  * Describe key idea
+  * Apply the key idea
+  * ((*Wrap up*)) & The next step
 
 = This talk's goal
 
-You develope more better softwares
+(('tag:as-large-as-possible'))
+You know how to develope more better softwares
 
-= How to improve?
+= Key idea
 
-Experience\n
-a\n
-library developer
+((*R*))emember\n((*t*))han\n((*I*))magine
+
+= Remember than Imagine
+
+  * Imagine
+    * Difficult
+  * Remember
+    * Easy
+
+= For development
+
+  * Experience library user
+    * You must done!
+  * Then ((*remember*)) the experience
+
+= The next step
+
+  * Share this talk's goal
+  * Describe key idea
+  * Apply the key idea
+  * Wrap up & ((*The next step*))
+
+= Be a library developer
 
 = Why?
 
-You can remember than imagine
-
-= Question 1/4
-
-Are you Rubyist?
-
-= Question 2/4
-
-Have you used any gem?
-
-= Question 3/4
-
-Did you contact a gem author?
-
-= Question 4/4
-
-Do you respect the author of the gem that you use? Is the author cool?
-
-= Question 5/5
-
-Do you want to be a gem author?
-
-= Question 6/5
-
-Are you a gem author?
-
-= Me
-
-  * A gem author\n
-    (Am I cool?)
-
-TODO: Figure: 2000- PC, 2002- Ruby, 2003- lib/rss, 2004- Ruby commiter
-
-= Agenda
-
-Introduce
-
-  * good things as a library developer based on my experience
-  * how to develope as a better "library developer"
-    * how to write codes
-    * how to write documents
-    * release
-    * support
-    * mental set
-
-= Good things
-
-= Good thing 1
-
-Less duplicated codes
-
-= Less duplicated codes
-
-I don't want to write the same codes!
-
-= Library
-
-  * Shares common codes
-  * Reuses existing codes
-  * ...
-
-= Good thing 2
-
-Reading someone's code is natural
-
-= Reading is natural
-
-  * ...
-
-= gem
-
-  * Package for easy to install
-  * Content is a library\n
-    (in many cases)
-
-= gem
-
-  * Package for easy to install
-  * Content is a (('tag:focus:library'))\n
-    (in many cases)
-
-= Summary
-
-
-
-= Target
-
-Library developers
+  * It is good experience for "remember than imagine"
+  * "library developer" experience is useful to 
+    develope other softwares such as Ruby
 
 = Conclusion
+
+TODO
