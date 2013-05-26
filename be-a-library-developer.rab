@@ -35,7 +35,7 @@ You know\nhow to develop more better softwares
 
 = More better?
 
-Show by example
+Show\nby example
 
 = API
 
@@ -59,7 +59,7 @@ Show by example
 
 = API: Why
 
-Why\nmore better?
+Why is it\nmore better?
 
 = API: Because
 
@@ -67,6 +67,7 @@ Because it's more Ruby-ish
 
 = Ruby-ish?
 
+-ish ==\n
 Similar to others
 
 = Remember
@@ -186,7 +187,25 @@ Ruby user
 
 You experienced!
 
-= But...
+= Try
+
+= API: Getter
+
+  # coderay ruby
+  window.get_property("opacity")
+  # What is better API???
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= API: Getter (better)
+
+  # coderay ruby
+  window.get_property("opacity")
+  window.opacity # Better
+
+(('tag:center'))(('note:from gtk2 gem'))
+
+= Now,
 
 (('tag:as-large-as-possible'))
 You will find "remember" is "difficult"
@@ -246,7 +265,7 @@ It is very good exercise
 
 = API
 
-= API: Getter
+= API: Getter (reprise)
 
   # coderay ruby
   # Low level
@@ -316,7 +335,7 @@ Install:
 = This talk's goal
 
 (('tag:as-large-as-possible'))
-You know how to develop more better softwares
+You know\nhow to develop more better softwares
 
 = More better
 
@@ -341,12 +360,13 @@ Similar to others
   * Experience library user
     * You must done!
   * Then ((*remember*)) the experience
-    * But it is difficult becuase
+    * But it is difficult becuase 
       you don't have experience about "((*remember*))"
 
-= Experience library developer
+= Experience lib developer
 
-It is very good exercise
+(('tag:as-large-as-possible'))
+It is\nvery good exercise
 
 = The next step
 
@@ -369,7 +389,17 @@ You can remember about
   * a better bug report
     * How to reproduce?
     * What is the expected result?
+  * a better commit
 
 = Conclusion
 
 Be a library developer!
+
+= FYI
+
+    # image
+    # src = clear-code.svg
+    # relative_height = 20
+
+  * We accept applications about our internship
+    * You can develop a library with us

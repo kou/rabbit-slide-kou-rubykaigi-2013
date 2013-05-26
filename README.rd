@@ -20,13 +20,23 @@ developers".
 
 == License
 
-=== Slide and images
+=== Slide
 
 CC BY-SA 3.0
 
 Use the followings for notation of the author:
 
   * Kouhei Sutou
+
+=== Images
+
+  * ClearCode Inc. logo
+
+==== ClearCode Inc. logo
+
+CC BY-SA 3.0
+
+Author: ClearCode Inc.
 
 === Fonts
 
