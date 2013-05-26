@@ -20,11 +20,31 @@ developers".
 
 == License
 
+=== Slide and images
+
 CC BY-SA 3.0
 
 Use the followings for notation of the author:
 
   * Kouhei Sutou
+
+=== Fonts
+
+  * Andika
+  * Larabie Fonts
+
+==== Andika
+
+SIL Open Font License 1.1
+
+Copyright: 2004-2011 SIL International (http://www.sil.org/), with
+Reserved Font Names "Andika" and "SIL".
+
+==== Larabie
+
+Author: Ray Larabie
+
+Copyright: See larabie-copyright.txt
 
 == For author
 
