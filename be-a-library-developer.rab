@@ -31,15 +31,13 @@
 = This talk's goal
 
 (('tag:as-large-as-possible'))
-You know how to develope more better softwares
+You know\nhow to develop more better softwares
 
 = More better?
 
-By example
+Show by example
 
 = API
-
-= API: 1
 
   # coderay ruby
   context.save
@@ -49,7 +47,7 @@ By example
 
 (('tag:center'))(('note:from cairo gem'))
 
-= API: 1 (better)
+= API: Better
 
   # coderay ruby
   context.save do
@@ -59,148 +57,69 @@ By example
 
 (('tag:center'))(('note:from cairo gem'))
 
-= API: 1 (better)
+= API: Why
+
+Why\nmore better?
+
+= API: Because
+
+Because it's more Ruby-ish
+
+= Ruby-ish?
+
+Similar to others
+
+= Remember
+
+File
+
+= Remember: File
 
   # coderay ruby
-  context.save do
+
+  # Setup
+  file = File.open(path)
+  file.read
+  # Teardown
+  file.close
+
+= Remember: File
+
+  # coderay ruby
+  # Setup
+  File.open(path) do |file|
+    file.read
+  end # Teardown
+
+= API: Better (reprise)
+
+  # coderay ruby
+  context.save do # Setup
     context.circle(50, 50, 10)
     context.stroke
-  end
+  end             # Teardown
 
 (('tag:center'))(('note:from cairo gem'))
 
-= API: 2
-
-  # coderay ruby
-  # low level
-  window.get_property("opacity")
-  # better
-  window.opacity
-
-(('tag:center'))(('note:from gtk2 gem'))
-
-= API: 3 (better?)
-
-  # coderay ruby
-  # low level
-  window.get_property("visible")
-  # better
-  # ???: hint: "visible" is bool
-
-(('tag:center'))(('note:from gtk2 gem'))
-
-= API: 3 (better)
-
-  # coderay ruby
-  # low level
-  window.get_property("visible")
-  # better
-  window.visible?
-
-(('tag:center'))(('note:from gtk2 gem'))
-
-= API: 4
-
-  # coderay ruby
-  # better for record as collection
-  record["name"]
-  # better for record as object
-  record.name
-
-(('tag:center'))(('note:from groonga gem'))
-
-= API: 5
-
-  # coderay ruby
-  require "gst"
-  # ???
-  Gst.init # <- What?
-  Gst::ElementFactory.make("playbin")
-
-(('tag:center'))(('note:from gstreamer gem'))
-
-= API: 5
-
-  # coderay ruby
-  require "gst"
-  # For advanced use
-  Gst.init("--gst-debug=*:9")
-  Gst::ElementFactory.make("playbin")
-
-(('tag:center'))(('note:from gstreamer gem'))
-
-= API: 5 (better)
-
-  # coderay ruby
-  require "gst"
-  # Make optional
-  # Gst.init
-  Gst::ElementFactory.make("playbin")
-
-(('tag:center'))(('note:from gstreamer gem'))
-
-= Implementation
-
-  # coderay ruby
-  class << Gst
-    def const_missing(name)
-      init; const_get(name); end
-    def init(*argv)
-      # ...initialize library...
-      class << self
-        remove_method(:init)
-        remove_method(:const_missing)
-      end; end; end
-
-= Docuemnt
-
-= Document: 1
-
-Install:
-
-  For Debian GNU/Linux:
-    % sudo apt-get install libgtk2.0-dev
-    % gem install gtk2
-  For OS X:
-    ...
-
-= Document: 1 (better)
-
-Install:
-
-  % gem install gtk2
-
-= Release
-
-= Release: 1
-
-Announce:
-
-  Ruby 1.8.7 was released on June 1st, 2008.  In commemoration
-  of the thrid anniversary of Ruby 1.8.7, we have a new
-  patchlevel release today.  It includes several bug fixes.
-  For the detail please read the ChangeLog.
-
-= Release: 1: not good
-
-((*read the ChangeLog*))
-
-= Release: 1: better
-
-How?\nLet's think later
-
-= Confirmation
-
-= This talk's goal
-
-(('tag:as-large-as-possible'))
-You know how to develope more better softwares
-
 = More better
 
-Showed\nby examples
+Ruby-ish
 
-= Table of contents
+= In other words
+
+Similar to others
+
+= The goal (reprise)
+
+(('tag:as-large-as-possible'))
+You know\nhow to develop more better softwares
+
+= In other words
+
+(('tag:as-large-as-possible'))
+You know\nwhat is "similar" and do similarly
+
+= Describe key idea
 
   * Share this talk's goal
   * ((*Describe key idea*))
@@ -209,6 +128,8 @@ Showed\nby examples
 
 = Key idea
 
+(('tag:left'))
+(('tag:margin-left * 10'))
 ((*R*))emember\n((*t*))han\n((*I*))magine
 
 = Imagine
@@ -231,25 +152,15 @@ Showed\nby examples
 
 = Experience!
 
-  * ((*Experience*))
+  * ((*Experience*)) ← Do this first!
   * Ask
   * Observe
 
-= What should you experience?
-
-= What
-
-Library user
-
-= Library user?
-
-You experienced!
-
 = Key idea
 
+(('tag:left'))
+(('tag:margin-left * 10'))
 ((*R*))emember\n((*t*))han\n((*I*))magine
-
-= Remember
 
 = Apply the key idea
 
@@ -258,200 +169,126 @@ You experienced!
   * ((*Apply the key idea*))
   * Wrap up & The next step
 
+= The goal (reprise)
+
+(('tag:as-large-as-possible'))
+You know\nhow to develop more better softwares
+
+= To archive the goal
+
+What should you experience?
+
+= What
+
+Ruby user
+
+= Ruby user?
+
+You experienced!
+
+= But...
+
+(('tag:as-large-as-possible'))
+You will find "remember" is "difficult"
+
+= Difficult!
+
+Remember?\n
+What is\n"Ruby-ish"?
+
+= Difficult?
+
+  * Imagine
+    * Difficult because you didn't know
+  * Remember
+    * Easy because you know ← ((*???*))
+
+= Because
+
+(('tag:as-large-as-possible'))
+You don't have experience about\n
+"((*R*))emember ((*t*))han ((*I*))magine"
+
+= Your status
+
+  * Experience
+  * ((*Ask*)) (Heard) ← You are here!
+  * Observe
+
+= To archive the goal
+
+What should you experience?
+
+= What
+
+Library developer
+
+= Library developer
+
+Considers about
+  * easy to use API
+    * as Ruby user
+  * easy to understand document
+    * as library user
+
+= Library developer
+
+Considers them ((*many times*))
+
+= "Many times"
+
+It is very good exercise
+
+= Examples
+
+  * API
+  * Document
+
 = API
 
-= API: 1
+= API: Getter
 
   # coderay ruby
-  context.save
-  context.circle(50, 50, 10)
-  context.stroke
-  context.restore
-
-(('tag:center'))(('note:from cairo gem'))
-
-= API: 1: Point
-
-  # coderay ruby
-  context.save    # Setup
-  context.circle(50, 50, 10)
-  context.stroke
-  context.restore # Teardown
-
-(('tag:center'))(('note:from cairo gem'))
-
-= Remember
-
-File
-
-= Remember: File
-
-  # coderay ruby
-
-  # Setup
-  file = File.open(path)
-  file.read
-  # Teardown
-  file.close
-
-= Remember: File
-
-  # coderay ruby
-  # Ensure teardown
-  File.open(path) do |file|
-    file.read
-    raise "error!"
-  end
-
-= do ... end style
-
-Merit:\n
-Ensure close
-
-= API: 1
-
-  # coderay ruby
-  context.save    # Setup
-  context.circle(50, 50, 10)
-  context.stroke
-  context.restore # Teardown
-
-(('tag:center'))(('note:from cairo gem'))
-
-= API: 1 (better)
-
-  # coderay ruby
-  # Ensure teardown
-  context.save do
-    context.circle(50, 50, 10)
-    context.stroke
-  end
-
-(('tag:center'))(('note:from cairo gem'))
-
-= API: 2
-
-  # coderay ruby
-  # low level
+  # Low level
   window.get_property("opacity")
-  # better
+  # Better
   window.opacity
 
 (('tag:center'))(('note:from gtk2 gem'))
 
-= API: 2: Point
-
-property\n==\nattribute
-
-= Remember
-
-Normal object
-
-= API: 2
+= API: Better?
 
   # coderay ruby
-  # low level
-  window.get_property("opacity")
-  # better
-  window.opacity
-
-(('tag:center'))(('note:from gtk2 gem'))
-
-= API: 3 (better?)
-
-  # coderay ruby
-  # low level
+  # Low level
   window.get_property("visible")
-  # better
+  # Better
   # ???: hint: "visible" is bool
 
 (('tag:center'))(('note:from gtk2 gem'))
 
-= Remember
-
-Predicate
-
-= Remember: Predicate
+= API: Better
 
   # coderay ruby
-  [].empty?
-  0.zero?
-
-= API: 3 (better)
-
-  # coderay ruby
-  # low level
+  # Low level
   window.get_property("visible")
-  # better: "?" suffix
+  # Better
   window.visible?
 
 (('tag:center'))(('note:from gtk2 gem'))
 
-= API: 4
+= API: Getter
 
   # coderay ruby
-  # better for record as collection
+  # Better for record as collection
   record["name"]
-  # better for record as object
+  # Better for record as object
   record.name
 
-(('tag:center'))(('note:from groonga gem'))
-
-= API: 5
-
-  # coderay ruby
-  require "gst"
-  # ???
-  Gst.init # <- What?
-  Gst::ElementFactory.make("playbin")
-
-(('tag:center'))(('note:from gstreamer gem'))
-
-= API: 5
-
-  # coderay ruby
-  require "gst"
-  # For advanced use
-  Gst.init("--gst-debug=*:9")
-  Gst::ElementFactory.make("playbin")
-
-(('tag:center'))(('note:from gstreamer gem'))
-
-= Remember
-
-Socket
-
-= Socket in C
-
-  # coderay c
-  int fd;
-  struct sockaddr *address;
-  fd = socket(PF_INET, SOCK_STREAM, 0);
-  /* address.sa_family = ...; */
-  connect(fd, address, address_size);
-
-= Socket in Ruby
-
-  # coderay ruby
-  TCPSocket.new("www.ruby-lang.org", 80)
-
-= Point
-
-Provide defaults
-
-= API: 5 (better)
-
-  # coderay ruby
-  require "gst"
-  # Make optional
-  # Gst.init
-  Gst::ElementFactory.make("playbin")
-
-(('tag:center'))(('note:from gstreamer gem'))
+(('tag:center'))(('note:from rroonga gem'))
 
 = Docuemnt
 
-= Document: 1
+= Document: Install
 
 Install:
 
@@ -461,57 +298,13 @@ Install:
   For OS X:
     ...
 
-= Remember
-
-You installed Nokogiri
-
-= Remember: Nokogiri
-
-  % gem install nokogiri
-  ...
-  libxml2 is missing. ...
-  ...
-  *** extconf.rb failed ***
-
-= Remember: Nokogiri
-
-  % sudo apt-get install libxml2-dev
-
-= Remember: Nokogiri
-
-  % gem install nokogiri
-  ...
-  libxslt is missing. ...
-  ...
-  *** extconf.rb failed ***
-
-= Document: 1 (better)
+= Document: Better
 
 Install:
 
   % gem install gtk2
-  (with auto "apt-get install")
 
-= Release
-
-= Release: 1
-
-Announce:
-
-  Ruby 1.8.7 was released on June 1st, 2008.  In commemoration
-  of the thrid anniversary of Ruby 1.8.7, we have a new
-  patchlevel release today.  It includes several bug fixes.
-  For the detail please read the ChangeLog.
-
-= Release: 1: not good
-
-((*read the ChangeLog*))
-
-= Release: 1: better
-
-How?\nLet's think later
-
-TODO
+(('tag:center'))(('note:libgtk2-0-dev is installed automatically'))
 
 = Wrap up
 
@@ -523,24 +316,37 @@ TODO
 = This talk's goal
 
 (('tag:as-large-as-possible'))
-You know how to develope more better softwares
+You know how to develop more better softwares
+
+= More better
+
+Ruby-ish\n
+Similar to others
 
 = Key idea
 
+(('tag:left'))
+(('tag:margin-left * 10'))
 ((*R*))emember\n((*t*))han\n((*I*))magine
 
 = Remember than Imagine
 
   * Imagine
-    * Difficult
+    * Difficult because you didn't know
   * Remember
-    * Easy
+    * Easy because you know
 
 = For development
 
   * Experience library user
     * You must done!
   * Then ((*remember*)) the experience
+    * But it is difficult becuase
+      you don't have experience about "((*remember*))"
+
+= Experience library developer
+
+It is very good exercise
 
 = The next step
 
@@ -549,14 +355,21 @@ You know how to develope more better softwares
   * Apply the key idea
   * Wrap up & ((*The next step*))
 
-= Be a library developer
+= The next step
 
-= Why?
+Use "library developer" experiense to other things
 
-  * It is good experience for "remember than imagine"
-  * "library developer" experience is useful to 
-    develope other softwares such as Ruby
+= For example,
+
+Use it to develop other softwares
+
+= Develope other softwares
+
+You can remember about
+  * a better bug report
+    * How to reproduce?
+    * What is the expected result?
 
 = Conclusion
 
-TODO
+Be a library developer!
