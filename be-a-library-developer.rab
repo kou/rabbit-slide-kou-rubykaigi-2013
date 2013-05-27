@@ -389,8 +389,8 @@ Use it to develop other softwares
 You can remember about
   * a better bug report
     * How to reproduce?
-    * What is the expected result?
-  * a better commit
+  * a better patch
+    * How to commit?
 
 = Conclusion
 
