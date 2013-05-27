@@ -212,8 +212,8 @@ You will find "remember" is "difficult"
 
 = Difficult!
 
-Remember?\n
-What is\n"Ruby-ish"?
+Remember!?\n
+What is\n"Ruby-ish"!?
 
 = Difficult?
 
@@ -256,7 +256,7 @@ Considers them ((*many times*))
 
 = "Many times"
 
-It is very good exercise
+It's very good exercise
 
 = Examples
 
@@ -325,6 +325,8 @@ Install:
 
 (('tag:center'))(('note:libgtk2-0-dev is installed automatically'))
 
+(('tag:center'))(('note:"gem install GEM_NAME" is popular install way'))
+
 = Wrap up
 
   * Share this talk's goal
@@ -365,8 +367,7 @@ Similar to others
 
 = Experience lib developer
 
-(('tag:as-large-as-possible'))
-It is\nvery good exercise
+It's very good exercise
 
 = The next step
 
