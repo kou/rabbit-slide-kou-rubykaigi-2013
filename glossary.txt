@@ -1,0 +1,37 @@
+ライブラリー	library（使いまわせるようにパッケージされたソフトウェア）
+rcairo	rcairo（あーるかいろ。Rubyで使えるライブラリーの一種。）
+API	API（えーぴーあい。ライブラリーを作った人と使う人の間の約束事。）
+cairo	cairo（かいろ。Rubyからは直接使えないライブラリーの一種。）
+Rabbit	Rabbit（らびっと。Rubyで作られた世界的に有名なプレゼンツール。）
+描画情報	drawing information？（普通に訳してよさそう）
+よりよい	more better（自分で考えた言い回し。英語的におかしな言い回しなら直したい。）
+ブロック	block（Rubyでのプログラムの書き方のひとつ。）
+Rubyらしい	Ruby-ish（るびーっしゅ？）
+他と似ている	similar to others（自分で考えた言い回し。英語的におかしな言い回しなら直したい。）
+統一感	integrated？（プログラム関係の文脈でintegrateは見るけど英語的にあっているかはわからない）
+メンテナンス    maintenance
+Rubyらしい書き方	Ruby-ish code
+前処理	setup
+後処理	teardown
+想像するんじゃなくて思い出す	remember than imagine（自分で考えた言い回し。英語的におかしな言い回しなら直したい。）
+Rubyist	Rubyist（るびーすと。Rubyユーザーのこと。）
+経験	experience
+Ruby/GTK2	Ruby GTK2（るびーじーてぃーけーつー）
+オブジェクト	object
+プロパティ	property
+属性	attribute
+attr_reader	attr_reader（あとりびゅーとりーだー。または、えーてぃてぃあーるりーだー。APIの一種。）
+開発者	developer
+たくさん	many times（自分で考えた言い回し。英語的におかしな言い回しなら直したい。）
+真偽値	boolean
+?	question mark
+レコード	record（関係するカラムを集めたひとまとまりのデータ）
+カラム	column（データを格納する場所）
+Hash	Hash
+メソッド	method（オブジェクトが実行できる処理の単位）
+コレクション	collection（データを集めたもの）
+拡張ライブラリー	extension library（C言語で書かれたRubyのライブラリー）
+gem	gem（じぇむ。Rubyのパッケージの単位。）
+RubyGems	RubyGems（るびーじぇむす。Rubyのパッケージシステム。）
+バグ	bug（不具合）
+パッチ	patch（プログラムを修正する変更）
