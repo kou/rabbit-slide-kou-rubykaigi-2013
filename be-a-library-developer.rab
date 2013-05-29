@@ -133,6 +133,17 @@ You know\nwhat is "similar" and do similarly
 (('tag:margin-left * 10'))
 ((*R*))emember\n((*t*))han\n((*I*))magine
 
+= Remember than Imagine
+
+  # image
+  # src = remember-than-imagine.svg
+  # relative_height = 100
+
+== slide property
+
+: enable-title-on-image
+   false
+
 = Imagine
 
   * Difficult
@@ -146,6 +157,17 @@ You know\nwhat is "similar" and do similarly
   * Many Japanese Rubyists can't remember wait time
 
 = To remember,
+
+  # image
+  # src = to-remember.svg
+  # relative_height = 100
+
+== slide property
+
+: enable-title-on-image
+   false
+
+= How to get knowledge?
 
   * Experience
   * Ask
@@ -175,7 +197,7 @@ You know\nwhat is "similar" and do similarly
 (('tag:as-large-as-possible'))
 You know\nhow to develop more better softwares
 
-= To archive the goal
+= To achieve the goal
 
 What should you experience?
 
@@ -304,6 +326,50 @@ It's very good exercise
   record.name
 
 (('tag:center'))(('note:from rroonga gem'))
+
+= API: Init
+
+  # coderay ruby
+  require "gst"
+  # ???
+  Gst.init # <- What?
+  Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= API: Init (usage)
+
+  # coderay ruby
+  require "gst"
+  # For advanced use
+  Gst.init("--gst-debug=*:9")
+  Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= API: Init (better)
+
+   # coderay ruby
+   require "gst"
+   # Make optional
+   # Gst.init
+   Gst::ElementFactory.make("playbin")
+
+(('tag:center'))(('note:from gstreamer gem'))
+
+= API: Init (impl)
+
+  # coderay ruby
+  class << Gst
+    def const_missing(name)
+      init; const_get(name); end
+    def init(*argv)
+      # ...initialize library...
+      class << self
+        remove_method(:const_missing)
+      end; end; end
+
+(('tag:center'))(('note:from gstreamer gem'))
 
 = Document
 
