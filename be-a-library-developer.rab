@@ -144,18 +144,6 @@ You know\nwhat is "similar" and do similarly
 : enable-title-on-image
    false
 
-= Imagine
-
-  * Difficult
-    * Because you didn't know
-  * Many programmers can't imagine about other people
-
-= Remember
-
-  * Easy
-    * Because you know
-  * Many Japanese Rubyists can't remember wait time
-
 = To remember,
 
   # image
@@ -268,10 +256,14 @@ What is\n"Ruby-ish"!?
 
 = Difficult?
 
-  * Imagine
-    * Difficult because you didn't know
-  * Remember
-    * Easy because you know ← ((*???*))
+  # image
+  # src = remember-is-difficult.svg
+  # relative_height = 100
+
+== slide property
+
+: enable-title-on-image
+   false
 
 = Because
 
