@@ -47,6 +47,11 @@ Show\nby example
 
 (('tag:center'))(('note:from cairo gem'))
 
+== slide property
+
+: evaluate-code
+   true
+
 = API: Better
 
   # coderay ruby
@@ -56,6 +61,11 @@ Show\nby example
   end
 
 (('tag:center'))(('note:from cairo gem'))
+
+== slide property
+
+: evaluate-code
+   true
 
 = API: Why
 
