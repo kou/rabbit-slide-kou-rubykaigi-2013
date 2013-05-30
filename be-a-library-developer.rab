@@ -80,6 +80,21 @@ Because it's more Ruby-ish
 -ish ==\n
 Similar to others
 
+= Similar is better?
+
+  * Similarity makes integration
+  * Integration makes readability
+  * Readability makes maintenability
+
+= Maintenability
+
+  * Maintenability is needed for 
+    improving your softwares repeatedly
+
+= So
+
+Ruby-ish is\nmore better
+
 = Remember
 
 File
@@ -87,7 +102,6 @@ File
 = Remember: File
 
   # coderay ruby
-
   # Setup
   file = File.open(path)
   file.read
@@ -111,6 +125,11 @@ File
   end             # Teardown
 
 (('tag:center'))(('note:from cairo gem'))
+
+== slide property
+
+: evaluate-code
+   true
 
 = More better
 
@@ -206,7 +225,7 @@ You know\nhow to develop more better softwares
 : enable-title-on-image
    false
 
-= To achieve the goal
+= To achieve the goal,
 
 What should you experience?
 
@@ -257,7 +276,7 @@ You experienced!
 = Now,
 
 (('tag:as-large-as-possible'))
-You will find "remember" is "difficult"
+You found "remember" is "difficult"
 
 = Difficult!
 
@@ -298,7 +317,7 @@ You don't have experience about\n
   * ((*Ask*)) (Heard) ← You are here!
   * Observe
 
-= To achieve the goal
+= To achieve the goal,
 
 What should you experience?
 
@@ -489,9 +508,8 @@ Similar to others
 
 = For development
 
-  * Experience Rubyist
-    * You must done!
-  * Then ((*remember*)) the experience
+  * Experience Rubyist for ((*knowledge*))
+  * Then ((*remember*)) the knowledge
     * But it is difficult because 
       you don't have experience about "((*remember*))"
 
@@ -528,10 +546,10 @@ Use it to develop other softwares
 = Develope other softwares
 
 You can remember about
-  * a better bug report
+  * a more better bug report
     * How to reproduce?
-  * a better patch
-    * How to commit?
+  * a more better patch
+    * How to commit? (size? message?)
 
 = Conclusion
 
@@ -549,8 +567,7 @@ Be a library developer!
 = Bonus tracks
 
   * Similar vs. Innovation
-  * No imagination communication\n
-    (('note:(maybe "imagination" is not a good term)'))
+  * No "imagine" communication\n
 
 = Similar\nvs.\nInnovation
 
@@ -565,9 +582,9 @@ Be a library developer!
   * It's also important that\n
     we improve our regular life
 
-= No imagination communication
+= No\n"imagine" communication
 
-= No imagination
+= No "imagine"
 
   * Show all u need from the start
     * Don't omit anything
