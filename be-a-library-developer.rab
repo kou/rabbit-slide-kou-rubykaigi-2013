@@ -52,6 +52,21 @@ Show\nby example
 : evaluate-code
    true
 
+= API: Point
+
+  # coderay ruby
+  context.save    # <- Point
+  context.circle(50, 50, 10)
+  context.stroke
+  context.restore # <- Point
+
+(('tag:center'))(('note:from cairo gem'))
+
+== slide property
+
+: evaluate-code
+   true
+
 = API: Better
 
   # coderay ruby
@@ -80,13 +95,15 @@ Because it's more Ruby-ish
 -ish ==\n
 Similar to others
 
-= Similar is better?
+= Is "similar" better?
 
-  * Similarity makes integration
-  * Integration makes readability
+  * Similarity makes sense of unity
+  * Sense of unity makes readability
+  * Readability is important to develop more better softwares
+
+= Is "readability" important?
+
   * Readability makes maintenability
-
-= Maintenability
 
   * Maintenability is needed for 
     improving your softwares repeatedly
@@ -94,6 +111,8 @@ Similar to others
 = So
 
 Ruby-ish is\nmore better
+
+= Let's validate the example
 
 = Remember
 
@@ -116,13 +135,13 @@ File
     file.read
   end # Teardown
 
-= API: Better (reprise)
+= API (reprise)
 
   # coderay ruby
-  context.save do # Setup
-    context.circle(50, 50, 10)
-    context.stroke
-  end             # Teardown
+  context.save    # Setup     
+  context.circle(50, 50, 10)
+  context.stroke
+  context.restore # Teardown  
 
 (('tag:center'))(('note:from cairo gem'))
 
@@ -130,6 +149,23 @@ File
 
 : evaluate-code
    true
+
+= API: Better (reprise)
+
+  # coderay ruby
+  context.save do # Setup     
+    context.circle(50, 50, 10)
+    context.stroke
+  end             # Teardown  
+
+(('tag:center'))(('note:from cairo gem'))
+
+== slide property
+
+: evaluate-code
+   true
+
+= Wrap up
 
 = More better
 
@@ -359,7 +395,7 @@ Considers them ((*many times*))
 
 It's very good exercise
 
-= Examples
+= Exercises
 
   * API
   * Document
@@ -472,6 +508,14 @@ Install:
 
 (('tag:center'))(('note:"gem install GEM_NAME" is popular install way'))
 
+= Exercises end
+
+  * We remembered about\n
+    "what is similar?"
+  * We done "similarly"
+
+= Do you understand about\n"((*R*))emember ((*t*))han ((*I*))magine"?
+
 = Wrap up
 
   * Share this talk's goal
@@ -488,6 +532,11 @@ You know\nhow to develop more better softwares
 
 Ruby-ish\n
 Similar to others
+
+= Goal: In other words
+
+(('tag:as-large-as-possible'))
+You know\nwhat is "similar" and do similarly
 
 = Key idea
 
