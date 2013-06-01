@@ -10,7 +10,7 @@
 : date
    2013/06/01
 : allotted-time
-   29m
+   28m
 : theme
    .
 
@@ -31,9 +31,9 @@
 = This talk's goal
 
 (('tag:as-large-as-possible'))
-You know\nhow to develop more better softwares
+You know\nhow to develop better softwares
 
-= More better?
+= Better?
 
 Show\nby example
 
@@ -84,7 +84,7 @@ Show\nby example
 
 = API: Why
 
-Why is it\nmore better?
+Why is it better?
 
 = API: Because
 
@@ -97,9 +97,9 @@ Similar to others
 
 = Is "similar" better?
 
-  * Similarity makes sense of unity
-  * Sense of unity makes readability
-  * Readability is important to develop more better softwares
+  * Similarity makes consistency
+  * Consistency makes readability
+  * Readability is important to develop better softwares
 
 = Is "readability" important?
 
@@ -110,7 +110,7 @@ Similar to others
 
 = So
 
-Ruby-ish is\nmore better
+Ruby-ish is\nbetter
 
 = Let's validate the example
 
@@ -167,7 +167,7 @@ File
 
 = Wrap up
 
-= More better
+= Better
 
 Ruby-ish
 
@@ -178,7 +178,7 @@ Similar to others
 = The goal (reprise)
 
 (('tag:as-large-as-possible'))
-You know\nhow to develop more better softwares
+You know\nhow to develop better softwares
 
 = In other words
 
@@ -248,7 +248,7 @@ You know\nwhat is "similar" and do similarly
 = The goal (reprise)
 
 (('tag:as-large-as-possible'))
-You know\nhow to develop more better softwares
+You know\nhow to develop better softwares
 
 = Apply the key idea
 
@@ -526,9 +526,9 @@ Install:
 = This talk's goal
 
 (('tag:as-large-as-possible'))
-You know\nhow to develop more better softwares
+You know\nhow to develop better softwares
 
-= More better
+= Better
 
 Ruby-ish\n
 Similar to others
@@ -595,9 +595,9 @@ Use it to develop other softwares
 = Develop other softwares
 
 You can remember about
-  * a more better bug report
+  * a better bug report
     * How to reproduce?
-  * a more better patch
+  * a better patch
     * How to commit? (size? message?)
 
 = Conclusion
